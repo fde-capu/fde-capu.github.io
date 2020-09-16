@@ -6,7 +6,7 @@
 //   By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/09/15 17:20:33 by fde-capu          #+#    #+#             //
-//   Updated: 2020/09/16 13:26:15 by fde-capu         ###   ########.fr       //
+//   Updated: 2020/09/16 14:51:00 by fde-capu         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -50,7 +50,14 @@ function	loop()
 	set_score("Money", planet.money);
 	set_gauge("Habitability", planet.habitability); 
 	set_gauge("Happiness", planet.happiness);
-	show_events()
+	show_events();
+	let_there_be_chaos();
+}
+
+function let_there_be_chaos()
+{
+	chaos *= chaos;
+	console.log (chaos);
 }
 
 function	empty_month()
@@ -88,13 +95,13 @@ function	all_condition(c)
 {
 	if (
 		(c[0] > 0 && planet.population < c[0])
-	 || (c[0] < 0 && planet.population > abs(c[0]))
+	 || (c[0] < 0 && planet.population > Math.abs(c[0]))
 	 || (c[1] > 0 && planet.money < c[1])
-	 || (c[1] < 0 && planet.money > abs(c[1]))
+	 || (c[1] < 0 && planet.money > Math.abs(c[1]))
 	 || (c[2] > 0 && planet.habitability < c[2])
-	 || (c[2] < 0 && planet.habitability > abs(c[2]))
+	 || (c[2] < 0 && planet.habitability > Math.abs(c[2]))
 	 || (c[3] > 0 && planet.happiness < c[3])
-	 || (c[3] < 0 && planet.happiness > abs(c[3]))
+	 || (c[3] < 0 && planet.happiness > Math.abs(c[3]))
 	)
 		return 0;
 	return 1;
