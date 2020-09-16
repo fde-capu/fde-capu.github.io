@@ -375,16 +375,31 @@ var events = [
 
 		}]
 	}, {
-		id:			17,
-		title:			"People love living here! This is a green haven.",
+		id:			18,
+		title:			"People are so happy they cry of joy!",
 		end_game:		1,
-		description:		"You have done it! You've made our planet into a green haven. People love it here.",
-		condition:		[0, 0, 0.95, 0],
+		description:		"We are the home of the happiest people in the galaxy. You've done it! We love every single second of life we have.",
+		condition:		[0, 0, 0, 0.99],
 		timer:			0,
 		image:			"img/.jpg",
 		options:		[
 		{
-			caption:	"This is it! I never though we could do this. Yet, here we are.",
+			caption:	"Everytime I breath I feel glad to be alive. Everytime I look to the sky I understand why we're here.",
+			effect:		[0, 0, 0, 0],
+			success:	"The End"
+
+		}]
+	}, {
+		id:			19,
+		title:			"Aliens are coming!",
+		end_game:		1,
+		description:		"We have been too happy for too long. Aliens have noticed. They envy our happiness and how green our beatiful planet is. They are taking it over for them!",
+		condition:		[0, 0, 0.90, 0.90],
+		timer:			0,
+		image:			"img/.jpg",
+		options:		[
+		{
+			caption:	"There is nothing we can do. Their technology is too advanced. This is the last breath of our species. This is no longer our planet.",
 			effect:		[0, 0, 0, 0],
 			success:	"The End"
 
