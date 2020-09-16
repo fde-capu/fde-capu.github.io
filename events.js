@@ -14,6 +14,7 @@ var events = [
 	{
 		id:			1,
 		title:			"A meteor is going to crash on Earth!",
+		end_game:		0,
 		description:		"Scientists have just noticed a huge fire ball coming directly towards a kittens nursery. It is a danger to the life of those kittens and to the life of the people who live next to it!",
 		condition:		[0, 0, 0, 0],
 		timer:			3,
@@ -35,6 +36,7 @@ var events = [
 	}, {
 		id:			2,
 		title:			"Aliens have come with their plasma guns!",
+		end_game:		0,
 		description:		"Aliens have landed on top of the Eiffel Tower and have turned several Parisians into hostages. What will we do!?",
 		condition:		[0, 0, 0, 0],
 		timer:			6,
@@ -56,6 +58,7 @@ var events = [
 	}, {
 		id:			3,
 		title:			"Aliens want to explode your planet!",
+		end_game:		0,
 		description:		"Aliens are threatening to explode our home! Oh no! Not our planet! What will we do now!?",
 		condition:		[0, 0, 0, 0.7],
 		timer:			12,
@@ -77,6 +80,7 @@ var events = [
 	}, {
 		id:			4,
 		title:			"Aliens have come in a peaceful mission!",
+		end_game:		0,
 		description:		"They arrived in big spaceships and want to talk. What should we do?",
 		condition:		[0, -100000, 0, 0],
 		timer:			3,
@@ -98,6 +102,7 @@ var events = [
 	}, {
 		id:			5,
 		title:			"An earthquake!! Oh no!",
+		end_game:		0,
 		description:		"Raging quakes EVERYWHERE! Oh no! Master! What should we do?",
 		condition:		[0, 0, -0.9, 0],
 		timer:			3,
@@ -119,6 +124,7 @@ var events = [
 	}, {
 		id:			6,
 		title:			"Atlantis re-emerged! Zeus? Are you here?",
+		end_game:		0,
 		description:		"By Atena! I thought it was a myth... I want a pegasus! Zeus came to talk to you. Aparently they're flying away from this planet in their island. Ask for a farewell gift!",
 		condition:		[0, 0, -0.5, 0],
 		timer:			99999,
@@ -140,6 +146,7 @@ var events = [
 	}, {
 		id:			7,
 		title:			"A what? A ciclone with nails?",
+		end_game:		0,
 		description:		"Here we go again... Another ciclone with nails incoming, what should we do?",
 		condition:		[0, 0, 0, 0],
 		timer:			3,
@@ -161,6 +168,7 @@ var events = [
 	}, {
 		id:			8,
 		title:			"An earthquake happened and a TITAN came out of the cracks! He wants offerings.",
+		end_game:		0,
 		description:		"Titans are those giant thingys that kill people and create havoc and are gods or something, right?",
 		condition:		[0, 0, 0, 0],
 		timer:			99999,
@@ -182,6 +190,7 @@ var events = [
 	}, {
 		id:			9,
 		title:			"An opportunity to build a hospital has appeared. What should we do?",
+		end_game:		0,
 		description:		"Hospitals are the sacred temple of health.",
 		condition:		[0, 0, -0.5, 0],
 		timer:			3,
@@ -203,6 +212,7 @@ var events = [
 	}, {
 		id:			10,
 		title:			"An opportunity to build a school has appeared. What should we do?",
+		end_game:		0,
 		description:		"Schools are the sacred temple of knowledge.",
 		condition:		[0, 0, -0.7, -0.7],
 		timer:			3,
@@ -224,6 +234,7 @@ var events = [
 	}, {
 		id:			11,
 		title:			"An opportunity to build a stadium has appeared. What should we do?",
+		end_game:		0,
 		description:		"Bread and circus they said.",
 		condition:		[0, 0, 0, 0],
 		timer:			3,
@@ -245,6 +256,7 @@ var events = [
 	}, {
 		id:			12,
 		title:			"An opportunity to build a financial center has appeared. What should we do?",
+		end_game:		0,
 		description:		"Love the smell of green.",
 		condition:		[0, 0, 0, 0],
 		timer:			3,
@@ -262,6 +274,120 @@ var events = [
 			caption:	"Dude, no. Let's make a small pond for little duckies.",
 			effect:		[0, -800000, -0.30, 0.40],
 			success:	""
+		}]
+	}, {
+		id:			13,
+		title:			"Habitability is too low! People are dieing.",
+		end_game:		0,
+		description:		"Our planet is becoming too unfit for life!",
+		condition:		[0, 0, -0.20, 0],
+		timer:			1,
+		image:			"img/.jpg",
+		options:		[
+		{
+			caption:	"There is nothing we can do.",
+			effect:		[-10000000, -100, 0.01, -0.1],
+			success:	"People are dieing... Is this the end?"
+		}, {
+			caption:	"We have to reverse this!",
+			effect:		[-10000000, -10000000, 0.1, -0.05],
+			success:	"This is expensive...!"
+		}]
+	}, {
+		id:			14,
+		title:			"Our banks are running low on funds... What should we do?",
+		end_game:		0,
+		description:		"I need Iphones!",
+		condition:		[0, -10000, 0, 0],
+		timer:			3,
+		image:			"img/.jpg",
+		options:		[
+		{
+			caption:	"Let's call the aliens and sell them some humans.",
+			effect:		[-1000, 200000, 0.1, -0.1],
+			success:	"I can't believe we've come this low."
+		}, {
+			caption:	"Let's print moneyz! Hell yeah baby!",
+			effect:		[0, 2000, 0, -0.1],
+			success:	"Oh yeah... Make it rain baby!"
+		}, {
+			caption:	"There is nothing we can do...",
+			effect:		[0, 0, 0, -0.2],
+			success:	"What will become of us?"
+		}]
+	}, {
+		id:			15,
+		title:			"Our population is low!",
+		end_game:		0,
+		description:		"Soon we will become extinct! We should do something about it right?",
+		condition:		[-1000000000, 0, 0, 0],
+		timer:			2,
+		image:			"img/.jpg",
+		options:		[
+		{
+			caption:	"Let's create replication centers.",
+			effect:		[10000000, -200000, -0.05, -0.05],
+			success:	"Now I see 10 Joes. Too many Joes..."
+		}, {
+			caption:	"Let's pay people to breed and make more babys!",
+			effect:		[5000000, -20000, -0.5, 0.15],
+			success:	"They loved it!"
+		}, {
+			caption:	"There is nothing we can do...",
+			effect:		[0, 0, 0, -0.2],
+			success:	"Will we become extinct?"
+		}]
+	}, {
+		id:			16,
+		title:			"People are unhappy!",
+		end_game:		0,
+		description:		"People don't like living here anymore. They loath being alive.",
+		condition:		[0, 0, 0, -0.1],
+		timer:			2,
+		image:			"img/.jpg",
+		options:		[
+		{
+			caption:	"Let's throw a huge party!",
+			effect:		[-100, -200000, -0.05, 0.15],
+			success:	"Hell yeah, bro. That was liiiiiit!"
+		}, {
+			caption:	"Let's pray for better times.",
+			effect:		[-1000, 0, 0.5, 0.05],
+			success:	"For some it works, for others it doesn't."
+		}, {
+			caption:	"There is nothing we can do...",
+			effect:		[-1000000, 0, 0.15, -0.2],
+			success:	"People don't want to live anymore..."
+		}]
+	}, {
+		id:			17,
+		title:			"People love living here! This is a green haven.",
+		end_game:		1,
+		description:		"You have done it! You've made our planet into a green haven. People love it here.",
+		condition:		[0, 0, 0.95, 0],
+		timer:			0,
+		image:			"img/.jpg",
+		options:		[
+		{
+			caption:	"This is it! I never though we could do this. Yet, here we are.",
+			effect:		[0, 0, 0, 0],
+			success:	"The End"
+
+		}]
+	}, {
+		id:			17,
+		title:			"People love living here! This is a green haven.",
+		end_game:		1,
+		description:		"You have done it! You've made our planet into a green haven. People love it here.",
+		condition:		[0, 0, 0.95, 0],
+		timer:			0,
+		image:			"img/.jpg",
+		options:		[
+		{
+			caption:	"This is it! I never though we could do this. Yet, here we are.",
+			effect:		[0, 0, 0, 0],
+			success:	"The End"
+
 		}]
 	}
 ];
