@@ -6,7 +6,7 @@
 //   By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/09/15 17:20:33 by fde-capu          #+#    #+#             //
-//   Updated: 2020/09/16 11:59:43 by fde-capu         ###   ########.fr       //
+//   Updated: 2020/09/16 13:26:15 by fde-capu         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -58,6 +58,7 @@ function	empty_month()
 	print("");
 	print("Nothing happened for a month.");
 	make_button(0, {caption:"Continue."});
+	scroll_bottom();
 }
 
 function	show_events()
@@ -142,6 +143,7 @@ function	execbtn(bt)
 		pclear();
 	}
 	next_month();
+	scroll_bottom();
 	wait = 0;
 }
 

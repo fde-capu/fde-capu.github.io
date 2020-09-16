@@ -6,7 +6,7 @@
 //   By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/09/15 22:24:59 by fde-capu          #+#    #+#             //
-//   Updated: 2020/09/16 11:42:51 by fde-capu         ###   ########.fr       //
+//   Updated: 2020/09/16 13:25:31 by fde-capu         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -47,6 +47,10 @@ function	print (str)
 	if (textArea.innerHTML != "")
 		textArea.innerHTML += "<br>";
 	textArea.innerHTML += str;
+}
+
+function	scroll_bottom()
+{
 	textArea.scrollTop = textArea.scrollHeight;
 }
 
