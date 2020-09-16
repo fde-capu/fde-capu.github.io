@@ -20,6 +20,6 @@ var	planet = {
 	month:			1,
 	population:		8000000000,
 	money:			500000000,
-	habitability:	0.65,
-	happiness:		0.68
+	habitability:	0.50,
+	happiness:		0.50
 }
