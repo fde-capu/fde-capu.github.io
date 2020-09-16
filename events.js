@@ -6,7 +6,7 @@
 //   By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/09/16 00:01:23 by fde-capu          #+#    #+#             //
-//   Updated: 2020/09/16 00:01:46 by fde-capu         ###   ########.fr       //
+//   Updated: 2020/09/16 12:46:23 by fde-capu         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -14,7 +14,7 @@ var events = [
 	{
 		id:				1,
 		title:			"A meteor is going to crash on Earth!",
-		description:	"Scientists have just noticed a huge fire ball coming directly towards a kittens nursery. It is a danger to the life of those kittens and to the life of the people who live next to it!",
+		description:	"Scientists have just noticed a huge fire ball coming directly towards a kittens nursery. It is a danger to the life of those kittens and to the life of the people who live next to it! Scientists have just noticed a huge fire ball coming directly towards a kittens nursery. It is a danger to the life of those kittens and to the life of the people who live next to it! Scientists have just noticed a huge fire ball coming directly towards a kittens nursery. It is a danger to the life of those kittens and to the life of the people who live next to it! Scientists have just noticed a huge fire ball coming directly towards a kittens nursery. It is a danger to the life of those kittens and to the life of the people who live next to it!",
 		condition:		[0, 0, 0, 0],
 		image:			"img/picture.jpg",
 		timer:			3,
