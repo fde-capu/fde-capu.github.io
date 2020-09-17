@@ -6,7 +6,7 @@
 //   By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/09/15 18:53:34 by fde-capu          #+#    #+#             //
-//   Updated: 2020/09/17 02:04:05 by fde-capu         ###   ########.fr       //
+//   Updated: 2020/09/17 02:46:27 by fde-capu         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -23,7 +23,11 @@ function	getran (min, max, obs)
 	scale = max - min;
 	r = scale + 1;
 	while (r > scale)
+	{
 		r = Math.random() * (scale + 1);
+		if (obs)
+			r = Math.round(r);
+	}
 	r += min;
 	r = Math.round(r * 100) / 100;
 	if (obs)

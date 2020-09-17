@@ -6,7 +6,7 @@
 //   By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/09/15 17:20:33 by fde-capu          #+#    #+#             //
-//   Updated: 2020/09/17 00:18:15 by fde-capu         ###   ########.fr       //
+//   Updated: 2020/09/17 02:49:31 by fde-capu         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -68,6 +68,7 @@ function	empty_month()
 {
 	print("");
 	print("Nothing happened for a month.");
+	show_image("");
 	make_button(0, {caption:"Continue."});
 	scroll_bottom();
 }
@@ -76,11 +77,11 @@ function	show_events()
 {
 	e = 0;
 	i = 0;
-	r = [];
+	let r = [];
 	while (events[i])
 	{
 		if (ok_condition(events[i]))
-			r.push(e);
+			r.push(i);
 		i++;
 	}
 	if (!r.length)
@@ -89,8 +90,8 @@ function	show_events()
 		wait = 1;
 		return ;
 	}
-	s = getran(0, r.length, 1);
-	e = events[s];
+	s = getran(0, (r.length - 1), 1);
+	e = events[r[s]];
 	show_image(e.image);
 	print("");
 	print(e.title.tag("h4"));
@@ -128,7 +129,7 @@ function	ok_condition(e)
 	if (!isdef(e.count))
 		e.count = 0;
 	e.count++;
-	if (e.count && e.count < e.timer)
+	if (e.count < e.timer)
 		return 0;
 	if (!all_condition(e.condition))
 		return 0;
