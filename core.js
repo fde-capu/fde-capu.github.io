@@ -6,7 +6,7 @@
 //   By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/09/15 17:20:33 by fde-capu          #+#    #+#             //
-//   Updated: 2020/09/16 22:06:54 by fde-capu         ###   ########.fr       //
+//   Updated: 2020/09/16 22:14:43 by fde-capu         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -186,6 +186,7 @@ function	calc_event()
 
 function	print_results(ga, gm, ghab, ghap)
 {
+	print("");
 	if (ga && ga > 0)
 		print("Population gained " + ga + ".");
 	if (ga && ga < 0)
