@@ -55,6 +55,17 @@ body {
 	display: table;
 }
 
+the_planet_name {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 101.01%;
+    text-rendering: geometricPrecision;
+    background: rgba(10,10,10,.05);
+    border-radius: 10px;
+    padding: 1.25px;	
+}
+
 .score_box:before {
 	margin-left: 3px;
 	content: var(--content, "NO_NAME");

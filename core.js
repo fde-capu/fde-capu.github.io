@@ -6,7 +6,7 @@
 //   By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/09/15 17:20:33 by fde-capu          #+#    #+#             //
-//   Updated: 2020/09/17 00:05:33 by fde-capu         ###   ########.fr       //
+//   Updated: 2020/09/17 00:18:15 by fde-capu         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -138,7 +138,7 @@ function	ok_condition(e)
 
 function	make_planet(name)
 {
-	planet.name = name;
+	planet.name = name.tag("the_planet_name");
 	makePArea();
 }
 
