@@ -6,7 +6,7 @@
 //   By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/09/16 00:01:23 by fde-capu          #+#    #+#             //
-//   Updated: 2020/09/16 23:36:44 by fde-capu         ###   ########.fr       //
+//   Updated: 2020/09/17 15:19:06 by fde-capu         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -18,7 +18,7 @@ var events = [
 		description:		"Scientists have just noticed a huge fire ball coming directly towards a kittens nursery. It is a danger to the life of those kittens and to the life of the people who live next to it!",
 		condition:		[0, 0, 0, 0],
 		timer:			3,
-		image:			"img/pilot1.png",
+		image:			"img/1.png",
 		options:		[
 		{
 			caption:	"Nothing can be done... Poor kittens.",
@@ -40,7 +40,7 @@ var events = [
 		description:		"Aliens have landed on top of the Eiffel Tower and have turned several Parisians into hostages. What will we do!?",
 		condition:		[0, 0, 0, 0],
 		timer:			6,
-		image:			"img/pilot2.png",
+		image:			"img/2.png",
 		options:		[
 		{
 			caption:	"Let those frenchies die!",
@@ -62,7 +62,7 @@ var events = [
 		description:		"Aliens are threatening to explode our home! Oh no! Not our planet! What will we do now!?",
 		condition:		[0, 0, 0, 0.7],
 		timer:			12,
-		image:			"img/pilot3.png",
+		image:			"img/3.png",
 		options:		[
 		{
 			caption:	"Pray. [HIDDEN]",
@@ -84,7 +84,7 @@ var events = [
 		description:		"They arrived in big spaceships and want to talk. What should we do?",
 		condition:		[0, -100000, 0, 0],
 		timer:			3,
-		image:			"img/pilot4.png",
+		image:			"img/4.png",
 		options:		[
 		{
 			caption:	"Shoot them! We shall not talk to any stupid aliens. [HIDDEN]",
@@ -106,7 +106,7 @@ var events = [
 		description:		"Raging quakes EVERYWHERE! Oh no! Master! What should we do?",
 		condition:		[0, 0, -0.9, 0],
 		timer:			3,
-		image:			"img/pilot5.png",
+		image:			"img/5.png",
 		options:		[
 		{
 			caption:	"RUN FOR THE HILLS!",
@@ -128,7 +128,7 @@ var events = [
 		description:		"By Atena! I thought it was a myth... I want a pegasus! Zeus came to talk to you. Aparently they're flying away from this planet in their island. Ask for a farewell gift!",
 		condition:		[0, 0, -0.5, 0],
 		timer:			99999,
-		image:			"img/pilot6.png",
+		image:			"img/6.png",
 		options:		[
 		{
 			caption:	"I want a pegasus!",
@@ -150,7 +150,7 @@ var events = [
 		description:		"Here we go again... Another ciclone with nails incoming, what should we do?",
 		condition:		[0, 0, 0, 0],
 		timer:			3,
-		image:			"img/pilot7.png",
+		image:			"img/7.png",
 		options:		[
 		{
 			caption:	"Hide inside your houses!",
@@ -172,7 +172,7 @@ var events = [
 		description:		"Titans are those giant thingys that kill people and create havoc and are gods or something, right?",
 		condition:		[0, 0, 0, 0],
 		timer:			99999,
-		image:			"img/pilot8.png",
+		image:			"img/8.png",
 		options:		[
 		{
 			caption:	"Shoot it! [HIDDEN]",
@@ -194,7 +194,7 @@ var events = [
 		description:		"Hospitals are the sacred temple of health.",
 		condition:		[0, 0, -0.5, 0],
 		timer:			3,
-		image:			"img/pilot9.png",
+		image:			"img/9.png",
 		options:		[
 		{
 			caption:	"Build a small clinic.",
@@ -216,7 +216,7 @@ var events = [
 		description:		"Schools are the sacred temple of knowledge.",
 		condition:		[0, 0, -0.7, -0.7],
 		timer:			3,
-		image:			"img/pilot10.png",
+		image:			"img/10.png",
 		options:		[
 		{
 			caption:	"Build a small school.",
@@ -238,7 +238,7 @@ var events = [
 		description:		"Bread and circus they said.",
 		condition:		[0, 0, 0, 0],
 		timer:			3,
-		image:			"img/pilot11.png",
+		image:			"img/11.png",
 		options:		[
 		{
 			caption:	"Build a small park instead.",
@@ -260,7 +260,7 @@ var events = [
 		description:		"Love the smell of green.",
 		condition:		[0, 0, 0, 0],
 		timer:			3,
-		image:			"img/pilot12.png",
+		image:			"img/12.png",
 		options:		[
 		{
 			caption:	"Let's build it.",
@@ -282,7 +282,7 @@ var events = [
 		description:		"Our planet is becoming too unfit for life!",
 		condition:		[0, 0, -0.20, 0],
 		timer:			1,
-		image:			"img/pilot13.png",
+		image:			"img/13.png",
 		options:		[
 		{
 			caption:	"There is nothing we can do.",
@@ -300,7 +300,7 @@ var events = [
 		description:		"I need Iphones!",
 		condition:		[0, -10000, 0, 0],
 		timer:			3,
-		image:			"img/pilot14.png",
+		image:			"img/14.png",
 		options:		[
 		{
 			caption:	"Let's call the aliens and sell them some humans.",
@@ -322,7 +322,7 @@ var events = [
 		description:		"Soon we will become extinct! We should do something about it right?",
 		condition:		[-1000000000, 0, 0, 0],
 		timer:			2,
-		image:			"img/pilot15.png",
+		image:			"img/15.png",
 		options:		[
 		{
 			caption:	"Let's create replication centers.",
@@ -344,7 +344,7 @@ var events = [
 		description:		"People don't like living here anymore. They loath being alive.",
 		condition:		[0, 0, 0, -0.1],
 		timer:			2,
-		image:			"img/pilot16.png",
+		image:			"img/16.png",
 		options:		[
 		{
 			caption:	"Let's throw a huge party!",
@@ -366,7 +366,7 @@ var events = [
 		description:		"You have done it! You've made our planet into a green haven. People love it here.",
 		condition:		[0, 0, 0.95, 0],
 		timer:			0,
-		image:			"img/pilot17.png",
+		image:			"img/17.png",
 		options:		[
 		{
 			caption:	"This is it! I never though we could do this. Yet, here we are.",
@@ -381,7 +381,7 @@ var events = [
 		description:		"We are the home of the happiest people in the galaxy. You've done it! We love every single second of life we have.",
 		condition:		[0, 0, 0, 0.99],
 		timer:			0,
-		image:			"img/pilot18.png",
+		image:			"img/18.png",
 		options:		[
 		{
 			caption:	"Everytime I breath I feel glad to be alive. Everytime I look to the sky I understand why we're here.",
@@ -396,7 +396,7 @@ var events = [
 		description:		"We have been too happy for too long. Aliens have noticed. They envy our happiness and how green our beatiful planet is. They are taking it over for them!",
 		condition:		[0, 0, 0.90, 0.90],
 		timer:			0,
-		image:			"img/pilot19.png",
+		image:			"img/19.png",
 		options:		[
 		{
 			caption:	"There is nothing we can do. Their technology is too advanced. This is the last breath of our species. This is no longer our planet.",
