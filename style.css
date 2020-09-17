@@ -20,6 +20,7 @@ body {
 	overflow-y: auto;
 	border-radius: 10px;
 	scroll-behavior: smooth;
+	vertical-align: top;
 }
 
 .image {
@@ -84,10 +85,13 @@ the_planet_name {
 }
 
 .button {
-	border: 2.5px solid rgba(0,0,0,0.1);
+	border: 2px solid rgba(0,0,0,0.1);
     margin: 5px;
-    padding: 5px 8px;
-    display: inline-block;
+	padding-top: 5px;
+	padding-bottom: 5px;
+    padding-right: 8px;
+    padding-left: 8px;
+    display: block;
     pointer-events: auto;
     cursor: hand;
     border-radius: 11px;
@@ -95,10 +99,10 @@ the_planet_name {
 }
 
 .button:active {
-    background: linear-gradient(3deg, #171717, #272727);
-    padding-top: 7px;
-    padding-bottom: 3px;
+	background: linear-gradient(0deg, #171717, #272727);
     color: #999;
+	padding-top: 7px;
+	padding-bottom: 3px;
 }
 
 .pre_notice {
