@@ -6,7 +6,7 @@
 //   By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/09/15 17:20:33 by fde-capu          #+#    #+#             //
-//   Updated: 2020/09/16 22:14:43 by fde-capu         ###   ########.fr       //
+//   Updated: 2020/09/17 00:05:33 by fde-capu         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -40,7 +40,7 @@ waithelper = setInterval(function()
 	if (wait) return false;
 	wait = 1;
 	loop(); 
-}, 100);
+}, 1000);
 
 function	loop()
 {
@@ -80,9 +80,7 @@ function	show_events()
 	while (events[i])
 	{
 		if (ok_condition(events[i]))
-		{
 			r.push(e);
-		}
 		i++;
 	}
 	if (!r.length)
@@ -93,13 +91,20 @@ function	show_events()
 	}
 	s = getran(0, r.length, 1);
 	e = events[s];
+	show_image(e.image);
 	print("");
-	print(e.title);
+	print(e.title.tag("h4"));
 	print(e.description);
 	e.options.forEach(function(o){
 		make_button(e, o);
 	});
+	scroll_bottom();
 	wait = 1;
+}
+
+function	show_image(img)
+{
+	imageArea.style.backgroundImage = "url('" + img + "')";
 }
 
 function	all_condition(c)
@@ -159,6 +164,13 @@ function	execbtn(bt)
 	{
 		bt.outerHTML = "";
 		pclear();
+	}
+	if (bt.parent_event.end_game)
+	{
+		print("");
+		print("Press F5 to restart.");
+		scroll_bottom();
+		return;
 	}
 	next_month();
 	scroll_bottom();

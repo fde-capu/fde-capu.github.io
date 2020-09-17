@@ -19,13 +19,26 @@ body {
 	height: 30%;
 	overflow-y: auto;
 	border-radius: 10px;
+	scroll-behavior: smooth;
+}
+
+.image {
+	margin: 0px;
+	padding: 0px;
+	width: 48%;
+	height: 90%;
+	float: right;
+	position: relative;
+	background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .playerarea {
 	display:inline-block;
 	margin: 0px;
 	padding: 0px;
-	width: 50%;
+	width: 48%;
 }
 
 .gauge, .score_box {
@@ -39,6 +52,7 @@ body {
 .score_box {
 	position: relative;
 	text-align: right;
+	display: table;
 }
 
 .score_box:before {
@@ -65,7 +79,7 @@ body {
 	display:inline-block;
 	pointer-events: auto;
 	cursor:hand;
-	border-radius: 10px;
+	border-radius: 9px;
 }
 
 .pre_notice {

@@ -6,7 +6,7 @@
 //   By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/09/15 19:11:32 by fde-capu          #+#    #+#             //
-//   Updated: 2020/09/16 21:50:41 by fde-capu         ###   ########.fr       //
+//   Updated: 2020/09/16 23:59:26 by fde-capu         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -39,4 +39,9 @@ Number.prototype.limits = function (min, max)
 Number.prototype.int = function ()
 {
 	return this.valueOf() | 0;
+}
+
+String.prototype.tag = function (t)
+{
+	return "<" + t + ">" + this + "</" + t + ">";
 }

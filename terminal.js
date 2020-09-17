@@ -6,7 +6,7 @@
 //   By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/09/15 22:24:59 by fde-capu          #+#    #+#             //
-//   Updated: 2020/09/16 22:13:17 by fde-capu         ###   ########.fr       //
+//   Updated: 2020/09/16 23:30:05 by fde-capu         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -18,11 +18,15 @@ var marker = [];
 var textArea;
 var buttonArea;
 var gaugeArea;
+var imageArea;
 
 function	makeAreas()
 {
 	gaugeArea = document.createElement("div");
-	gaugeArea.className = "areas";
+	gaugeArea.className = "areas fifty";
+	imageArea = document.createElement("div");
+	imageArea.className = "image";
+	gaugeArea.appendChild(imageArea);
 	document.body.appendChild(gaugeArea);
 	
 	textArea = document.createElement("div");
