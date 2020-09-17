@@ -6,7 +6,7 @@
 //   By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/09/15 22:24:59 by fde-capu          #+#    #+#             //
-//   Updated: 2020/09/16 21:55:34 by fde-capu         ###   ########.fr       //
+//   Updated: 2020/09/16 22:10:46 by fde-capu         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -170,13 +170,13 @@ function	soft_effect_report(c)
 		a.push("+");
 	if (c[1] < 0)
 		a.push("-");
-	if (c[0] == 0)
+	if (c[2] == 0)
 		a.push("_");
 	if (c[2] > 0)
 		a.push("+");
 	if (c[2] < 0)
 		a.push("-");
-	if (c[0] == 0)
+	if (c[3] == 3)
 		a.push("_");
 	if (c[3] > 0)
 		a.push("+");
