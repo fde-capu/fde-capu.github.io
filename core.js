@@ -6,7 +6,7 @@
 //   By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/09/15 17:20:33 by fde-capu          #+#    #+#             //
-//   Updated: 2020/09/16 14:51:00 by fde-capu         ###   ########.fr       //
+//   Updated: 2020/09/16 19:56:38 by fde-capu         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -54,10 +54,14 @@ function	loop()
 	let_there_be_chaos();
 }
 
-function let_there_be_chaos()
+function	total_months()
 {
-	chaos *= chaos;
-	console.log (chaos);
+	return planet.year * 12 + planet.month;
+}
+
+function	let_there_be_chaos()
+{
+	chaos += 0.00001 * total_months();
 }
 
 function	empty_month()
@@ -72,22 +76,29 @@ function	show_events()
 {
 	e = 0;
 	i = 0;
+	r = [];
 	while (events[i])
 	{
 		if (ok_condition(events[i]))
 		{
-			e = events[i];
-			print("");
-			print(e.title);
-			print(e.description);
-			e.options.forEach(function(o){
-				make_button(e, o);
-			});
+			r.push(e);
 		}
 		i++;
 	}
-	if (!e)
+	if (!r.length)
+	{
 		empty_month();
+		wait = 1;
+		return ;
+	}
+	s = getran(0, r.length, 1);
+	e = events[s];
+	print("");
+	print(e.title);
+	print(e.description);
+	e.options.forEach(function(o){
+		make_button(e, o);
+	});
 	wait = 1;
 }
 
@@ -156,12 +167,12 @@ function	execbtn(bt)
 
 function	calc_event()
 {
-	planet.population += g_ev.effect[0];
-	planet.money += g_ev.effect[1];
-	planet.habitability += g_ev.effect[2];
-	planet.happiness += g_ev.effect[3];
+	planet.population += g_ev.effect[0].ran(chaos).int();
+	planet.money += g_ev.effect[1].ran(chaos);
+	planet.habitability += g_ev.effect[2].ran(chaos);
+	planet.happiness += g_ev.effect[3].ran(chaos);
 	planet.population = planet.population.limits(0, "none");
-	planet.money = planet.money.limits(0, "none");
+	planet.money = round(planet.money.limits(0, "none"), 2);
 	planet.habitability = planet.habitability.limits(0, 1);
 	planet.happiness = planet.happiness.limits(0, 1);
 	print("");

@@ -6,13 +6,13 @@
 //   By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/09/15 19:12:03 by fde-capu          #+#    #+#             //
-//   Updated: 2020/09/16 14:45:53 by fde-capu         ###   ########.fr       //
+//   Updated: 2020/09/16 19:36:35 by fde-capu         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
 var	planet_name = ":: Planet Foo ::";
 var player;
-var	chaos = 0.99;
+var	chaos = 0;
 
 var	planet = {
 	name:			"",

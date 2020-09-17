@@ -6,7 +6,7 @@
 //   By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/09/15 22:24:59 by fde-capu          #+#    #+#             //
-//   Updated: 2020/09/16 13:25:31 by fde-capu         ###   ########.fr       //
+//   Updated: 2020/09/16 21:13:32 by fde-capu         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -120,9 +120,19 @@ function	destroy_buttons(e)
 
 function	make_button(e, b) 
 {
+	is_hidden = 0;
+
 	btn = document.createElement("div");
 	btn.className = "button";
-	btn.innerHTML = b.caption;
+	caption = b.caption;
+	if (caption.match(/.* \[HIDDEN\]$/))
+	{
+		caption = caption.substring(0, caption.length - 9);
+		is_hidden = 1;
+	}
+	if (!isdef(b.effect))
+		is_hidden = 1;
+	btn.innerHTML = caption;
 	btn.id = b.caption;
 	btn.effect = b.effect;
 	btn.success = b.success;
@@ -131,5 +141,40 @@ function	make_button(e, b)
 	{
 		execbtn(this);
 	}
+	if (!is_hidden)
+	{
+		btn.appendChild(show_pre_effect(b.effect));
+	}
 	buttonArea.appendChild(btn);
+}
+
+function	show_pre_effect(b)
+{
+	pre = document.createElement("div");
+	pre.className = "pre_notice";
+	pre.innerHTML = soft_effect_report(b);
+	return pre;
+}
+
+function	soft_effect_report(c)
+{
+	a = [];
+	if (c[0] > 0)
+		a.push("Population +");
+	if (c[0] < 0)
+		a.push("Population -");
+	if (c[1] > 0)
+		a.push("Money +");
+	if (c[1] < 0)
+		a.push("Money -");
+	if (c[2] > 0)
+		a.push("Habiltability +");
+	if (c[2] < 0)
+		a.push("Habiltability -");
+	if (c[3] > 0)
+		a.push("Happiness +");
+	if (c[3] < 0)
+		a.push("Happiness -");
+	console.log(a);
+	return a.join("");
 }
