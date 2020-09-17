@@ -6,7 +6,7 @@
 //   By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/09/15 19:12:03 by fde-capu          #+#    #+#             //
-//   Updated: 2020/09/16 19:36:35 by fde-capu         ###   ########.fr       //
+//   Updated: 2020/09/16 21:56:01 by fde-capu         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -20,6 +20,6 @@ var	planet = {
 	month:			1,
 	population:		8000000000,
 	money:			500000000,
-	habitability:	0.50,
-	happiness:		0.50
+	habitability:	0.65,
+	happiness:		0.68
 }

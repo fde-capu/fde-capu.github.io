@@ -6,7 +6,7 @@
 //   By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/09/15 22:24:59 by fde-capu          #+#    #+#             //
-//   Updated: 2020/09/16 21:27:20 by fde-capu         ###   ########.fr       //
+//   Updated: 2020/09/16 21:55:34 by fde-capu         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -142,9 +142,7 @@ function	make_button(e, b)
 		execbtn(this);
 	}
 	if (!is_hidden)
-	{
 		btn.appendChild(show_pre_effect(b.effect));
-	}
 	buttonArea.appendChild(btn);
 }
 
@@ -161,25 +159,25 @@ function	soft_effect_report(c)
 	a = [];
 	a.push("[");
 	if (c[0] == 0)
-		a.push(" ");
+		a.push("_");
 	if (c[0] > 0)
 		a.push("+");
 	if (c[0] < 0)
 		a.push("-");
 	if (c[1] == 0)
-		a.push(" ");
+		a.push("_");
 	if (c[1] > 0)
 		a.push("+");
 	if (c[1] < 0)
 		a.push("-");
 	if (c[0] == 0)
-		a.push(" ");
+		a.push("_");
 	if (c[2] > 0)
 		a.push("+");
 	if (c[2] < 0)
 		a.push("-");
 	if (c[0] == 0)
-		a.push(" ");
+		a.push("_");
 	if (c[3] > 0)
 		a.push("+");
 	if (c[3] < 0)

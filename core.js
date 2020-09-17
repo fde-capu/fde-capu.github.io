@@ -6,7 +6,7 @@
 //   By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/09/15 17:20:33 by fde-capu          #+#    #+#             //
-//   Updated: 2020/09/16 19:56:38 by fde-capu         ###   ########.fr       //
+//   Updated: 2020/09/16 22:06:54 by fde-capu         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -167,14 +167,39 @@ function	execbtn(bt)
 
 function	calc_event()
 {
-	planet.population += g_ev.effect[0].ran(chaos).int();
-	planet.money += g_ev.effect[1].ran(chaos);
-	planet.habitability += g_ev.effect[2].ran(chaos);
-	planet.happiness += g_ev.effect[3].ran(chaos);
+	ga = g_ev.effect[0].ran(chaos).int();
+	planet.population += ga;
+	gm = g_ev.effect[1].ran(chaos);
+	planet.money += gm;
+	ghab = g_ev.effect[2].ran(chaos);
+	planet.habitability += ghab;
+	ghap = g_ev.effect[3].ran(chaos);
+	planet.happiness += ghap;
 	planet.population = planet.population.limits(0, "none");
 	planet.money = round(planet.money.limits(0, "none"), 2);
 	planet.habitability = planet.habitability.limits(0, 1);
 	planet.happiness = planet.happiness.limits(0, 1);
 	print("");
 	print(g_ev.success);
+	print_results(ga, gm, ghab, ghap);
+}
+
+function	print_results(ga, gm, ghab, ghap)
+{
+	if (ga && ga > 0)
+		print("Population gained " + ga + ".");
+	if (ga && ga < 0)
+		print("Population lost " + Math.abs(ga) + ".");
+	if (gm && gm > 0)
+		print("Income: $" + gm + ".");
+	if (gm && gm < 0)
+		print("Lost $" + Math.abs(gm) + ".");
+	if (ghab && ghab > 0)
+		print(ghab + " more habitable.");
+	if (ghab && ghab < 0)
+		print("Habitability " + ghab + ".");
+	if (ghap && ghap > 0)
+		print("Happiness +" + ghap + "!");
+	if (ghap && ghap < 0)
+		print("A little " + ghap + " sad.");
 }
