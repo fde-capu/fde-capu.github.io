@@ -6,7 +6,7 @@
 //   By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/09/15 22:24:59 by fde-capu          #+#    #+#             //
-//   Updated: 2020/09/16 21:13:32 by fde-capu         ###   ########.fr       //
+//   Updated: 2020/09/16 21:27:20 by fde-capu         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -159,22 +159,31 @@ function	show_pre_effect(b)
 function	soft_effect_report(c)
 {
 	a = [];
+	a.push("[");
+	if (c[0] == 0)
+		a.push(" ");
 	if (c[0] > 0)
-		a.push("Population +");
+		a.push("+");
 	if (c[0] < 0)
-		a.push("Population -");
+		a.push("-");
+	if (c[1] == 0)
+		a.push(" ");
 	if (c[1] > 0)
-		a.push("Money +");
+		a.push("+");
 	if (c[1] < 0)
-		a.push("Money -");
+		a.push("-");
+	if (c[0] == 0)
+		a.push(" ");
 	if (c[2] > 0)
-		a.push("Habiltability +");
+		a.push("+");
 	if (c[2] < 0)
-		a.push("Habiltability -");
+		a.push("-");
+	if (c[0] == 0)
+		a.push(" ");
 	if (c[3] > 0)
-		a.push("Happiness +");
+		a.push("+");
 	if (c[3] < 0)
-		a.push("Happiness -");
-	console.log(a);
+		a.push("-");
+	a.push("]");
 	return a.join("");
 }

@@ -68,6 +68,12 @@ body {
 	border-radius: 10px;
 }
 
+.pre_notice {
+	display: inline;
+	margin-left: 15px;
+	color: #7a7a7a;
+}
+
 .caption {
 	position: relative;
 	top: -13.0px;

@@ -6,7 +6,7 @@
 //   By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/09/15 19:11:32 by fde-capu          #+#    #+#             //
-//   Updated: 2020/09/15 20:06:43 by fde-capu         ###   ########.fr       //
+//   Updated: 2020/09/16 21:50:41 by fde-capu         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -28,7 +28,7 @@ Array.prototype.byId = function (id)
 Number.prototype.ran = function (q)
 {
   if (typeof q == "undefined") q = 0.5;
-  return getran(this.valueOf() * q, this.valueOf() * q + this.valueOf());
+  return getran(this.valueOf() - (this.valueOf() * q), (this.valueOf() * q) + this.valueOf());
 }
 
 Number.prototype.limits = function (min, max)
