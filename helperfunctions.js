@@ -6,16 +6,20 @@
 //   By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/09/15 18:53:34 by fde-capu          #+#    #+#             //
-//   Updated: 2020/09/15 19:10:28 by fde-capu         ###   ########.fr       //
+//   Updated: 2020/09/17 01:51:58 by fde-capu         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
 function	getran (min, max, obs)
 {
-	var gr = ((Math.random() * (max - min)) + min);
+	mx = max + 1;
+	mn = min - 1;
+	var gr = ((Math.random() * (mx - mn)) + mn);
 	gr = Math.round(gr * 100) / 100;
 	if (obs)
 		gr = Math.round(gr);
+	if (gr > max || gr < min)
+		return getran(min, max, obs);
 	return gr;
 }
 

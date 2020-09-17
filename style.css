@@ -109,6 +109,7 @@ the_planet_name {
 	display: inline;
 	margin-left: 15px;
 	color: #7a7a7a;
+	float: right;
 }
 
 .caption {
