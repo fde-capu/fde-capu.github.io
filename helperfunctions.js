@@ -6,12 +6,21 @@
 //   By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/09/15 18:53:34 by fde-capu          #+#    #+#             //
-//   Updated: 2020/09/17 01:56:36 by fde-capu         ###   ########.fr       //
+//   Updated: 2020/09/17 02:02:55 by fde-capu         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
 function	getran (min, max, obs)
 {
+	console.log("min", min, "max", max, "obs", obs);
+	if (min == max)
+		return min;
+	if (min > max)
+	{
+		t = max;
+		max = min;
+		min = t;
+	}
 	scale = max - min;
 	r = scale + 1;
 	while (r > scale)
