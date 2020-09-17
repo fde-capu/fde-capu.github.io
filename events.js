@@ -39,7 +39,7 @@ var events = [
 		end_game:		0,
 		description:		"Aliens have landed on top of the Eiffel Tower and have turned several Parisians into hostages. What will we do!?",
 		condition:		[0, 0, 0, 0],
-		timer:			6,
+		timer:			4,
 		image:			"img/2.png",
 		options:		[
 		{
@@ -61,7 +61,7 @@ var events = [
 		end_game:		0,
 		description:		"Aliens are threatening to explode our home! Oh no! Not our planet! What will we do now!?",
 		condition:		[0, 0, 0, 0.6],
-		timer:			12,
+		timer:			4,
 		image:			"img/3.png",
 		options:		[
 		{
@@ -105,7 +105,7 @@ var events = [
 		end_game:		0,
 		description:		"Raging quakes EVERYWHERE! Oh no! Master! What should we do?",
 		condition:		[0, 0, -0.8, 0],
-		timer:			3,
+		timer:			2,
 		image:			"img/5.png",
 		options:		[
 		{
@@ -127,7 +127,7 @@ var events = [
 		end_game:		0,
 		description:		"By Atena! I thought it was a myth... I want a pegasus! Zeus came to talk to you. Aparently they're flying away from this planet in their island. Ask for a farewell gift!",
 		condition:		[0, 0, -0.5, 0],
-		timer:			99999,
+		timer:			4,
 		image:			"img/6.png",
 		options:		[
 		{
@@ -171,7 +171,7 @@ var events = [
 		end_game:		0,
 		description:		"Titans are those giant thingys that kill people and create havoc and are gods or something, right?",
 		condition:		[0, 0, 0, 0],
-		timer:			99999,
+		timer:			4,
 		image:			"img/8.png",
 		options:		[
 		{
